@@ -42,3 +42,15 @@ Issues found:
 - Invalid flight payloads return HTTP 400.
 - make api-test is passing.
 
+## Part 3
+
+- Deployed the API to Google Cloud Run using the Dockerfile in the repository.
+- Updated the Makefile stress URL to the public Cloud Run service URL.
+- Deployed URL: https://challenge-dataart-api-68330138622.europe-west1.run.app
+- Health check on the deployed service is responding correctly.
+- make stress-test is passing against the deployed service.
+
+Issues found:
+- The initial Cloud Run deployment failed because the default build service account was missing the specific Cloud Run build role.
+- The local stress-test environment also needed additional version pins for the old locust stack: Jinja2, Werkzeug and itsdangerous.
+
