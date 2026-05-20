@@ -30,3 +30,11 @@
 Issues found:
 - The notebook uses older seaborn barplot syntax with positional x/y arguments.
 - xgboost was used in the notebook but was not listed in the runtime requirements.
+
+## Part 2
+
+- Implemented the FastAPI /predict endpoint in challenge/api.py.
+- The API loads and trains the selected model once when the app starts.
+- The endpoint validates OPERA, TIPOVUELO and MES before predicting.
+- Invalid flight payloads return HTTP 400.
+- make api-test is passing.
