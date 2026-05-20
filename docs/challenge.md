@@ -4,8 +4,14 @@
 - Created the repository and kept the original challenge structure.
 - Added a minimal Python .gitignore.
 - Worked with main, develop, and feature/part1-model branches.
+- Defined virtual environment.
+- Run initial tests.
+- Model-test started failing on the actual model implementation instead of setup issues.
+- End of setup.
 
 ## Initial issues
 - Python 3.14 caused dependency installation problems, so I standardized the environment on Python 3.10.
 - The test stack had a dependency compatibility issue, which I fixed by pinning anyio to <4.
 - After fixing the environment, the first code-level failure appeared in challenge/model.py due to an invalid typing annotation.
+- Updated the Makefile so the provided tests run from a working directory compatible with the dataset path used in the test suite.
+- Removed the broken coverage config reference from the Makefile, since .coveragerc was not present in the repository.
