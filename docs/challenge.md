@@ -54,3 +54,10 @@ Issues found:
 - The initial Cloud Run deployment failed because the default build service account was missing the specific Cloud Run build role.
 - The local stress-test environment also needed additional version pins for the old locust stack: Jinja2, Werkzeug and itsdangerous.
 
+## Part 4
+
+- Added GitHub Actions workflows under .github/workflows.
+- CI runs on push and pull request, installs dependencies and executes make model-test and make api-test.
+- CD deploys automatically to Google Cloud Run on pushes to develop.
+- The deployment workflow requires a repository secret named GCP_SA_KEY with a service account key that has permission to deploy to Cloud Run.
+
