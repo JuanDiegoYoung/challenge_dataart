@@ -19,6 +19,7 @@
 ## Part 1
 
 - Implemented preprocessing, training and prediction logic in challenge/model.py.
+- To choose the best model, scripts/generate_model_performance.py generates a series of relevant images (confusion matrices, feature importances, etc) which are saved on challenge/model_performance.
 - The final chosen model is XGBoost using the top 10 features from the notebook and the class balancing.
 - I chose this model because it gave the best recall for delayed flights, which is the most relevant class for this use case.
 - Why is the most relevant class? Because the cost of not detecting a delayed flight tends to be higher than the cost of setting one as delayed that, in the end, wasn't. 
