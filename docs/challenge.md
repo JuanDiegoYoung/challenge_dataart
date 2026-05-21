@@ -24,7 +24,7 @@
 - I chose this model because it gave the best recall for delayed flights, which is the most relevant class for this use case.
 - Why is the most relevant class? Because the cost of not detecting a delayed flight tends to be higher than the cost of setting one as delayed that, in the end, wasn't. 
 - Logistic Regression was simpler and competitive, but the balanced XGBoost model handled the minority class better.
-- Model performance plots were saved in challente/model_performance.
+- Model performance plots were saved in challenge/model_performance.
 - make model-test is passing.
 
 Issues found:
@@ -60,4 +60,4 @@ Issues found:
 - CI runs on push and pull request, installs dependencies and executes make model-test and make api-test.
 - CD deploys automatically to Google Cloud Run on pushes to develop.
 - The deployment workflow requires a repository secret named GCP_SA_KEY with a service account key that has permission to deploy to Cloud Run.
-
+- The GitHub Actions service account also needed IAM access to Cloud Run, Cloud Build, Artifact Registry and the source upload bucket used by Cloud Run deployments from source.
